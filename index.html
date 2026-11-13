@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manual de Natal — Guia prático de decoração e presentes caseiros, baratos e criativos para a casa. Dicas DIY, enfeites recicláveis, receitas e atividades em família.">
+  <meta name="theme-color" content="#1B4D3E">
+  <meta name="keywords" content="decoração natalina barata, enfeites de natal caseiros, presentes DIY natal, natal econômico 2024, manual de natal, decoração de natal feita à mão">
+  <title>Manual de Natal — Decoração e Presentes Caseiros, Baratos e Criativos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎄</text></svg>">
+  <style>
+    :root {
+      --pine: #1B4D3E;
+      --pine-light: #2D6B4F;
+      --pine-dark: #0F2E1F;
+      --red-soft: #C0392B;
+      --red-hover: #A93226;
+      --gold: #D4A843;
+      --gold-light: #E8C56D;
+      --cream: #FDF6E3;
+      --cream-dark: #F5ECCB;
+      --text: #2C2C2C;
+      --text-light: #5A5A5A;
+      --white: #FFFFFF;
+      --shadow: 0 4px 20px rgba(27, 77, 62, 0.12);
+      --shadow-hover: 0 8px 32px rgba(27, 77, 62, 0.18);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --max-width: 1120px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    h1, h2, h3, h4 { font-family: 'Merriweather', Georgia, serif; font-weight: 700; line-height: 1.2; color: var(--pine); }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    input, textarea { font-family: inherit; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+    .skip-link { position: absolute; top: -100%; left: 50%; transform: translateX(-50%); background: var(--pine); color: var(--cream); padding: 0.75rem 1.5rem; border-radius: var(--radius-sm); z-index: 10000; font-weight: 600; }
+    .skip-link:focus { top: 1rem; }
+
+    /* ===== HEADER ===== */
+    header { background: var(--white); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 100; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 1rem; flex-wrap: wrap; }
+    .logo { display: flex; align-items: center; gap: 0.5rem; font-family: 'Merriweather', serif; font-size: 1.375rem; font-weight: 700; color: var(--pine); }
+    .logo svg { width: 36px; height: 36px; }
+    nav ul { display: flex; gap: 2rem; list-style: none; }
+    nav a { font-weight: 500; color: var(--text-light); padding: 0.5rem 0; position: relative; transition: color var(--transition); }
+    nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width var(--transition); }
+    nav a:hover, nav a[aria-current="page"] { color: var(--pine); }
+    nav a:hover::after, nav a[aria-current="page"]::after { width: 100%; }
+    .header-cta { display: flex; gap: 0.75rem; align-items: center; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: var(--radius); font-weight: 600; font-size: 0.9375rem; transition: all var(--transition); white-space: nowrap; }
+    .btn-primary { background: var(--pine); color: var(--cream); }
+    .btn-primary:hover { background: var(--pine-light); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+    .btn-secondary { background: transparent; color: var(--pine); border: 2px solid var(--pine); }
+    .btn-secondary:hover { background: var(--pine); color: var(--cream); }
+    .btn-gold { background: var(--gold); color: var(--pine-dark); }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+    .mobile-menu-btn { display: none; padding: 0.5rem; color: var(--pine); }
+    @media (max-width: 768px) {
+      .mobile-menu-btn { display: block; }
+      nav { position: absolute; top: 72px; left: 0; right: 0; background: var(--white); padding: 1.5rem; box-shadow: var(--shadow); display: none; flex-direction: column; gap: 1rem; }
+      nav.open { display: flex; }
+      nav ul { flex-direction: column; gap: 1rem; }
+      .header-cta { flex-direction: column; width: 100%; }
+      .header-cta .btn { width: 100%; }
+    }
+
+    /* ===== HERO ===== */
+    .hero { position: relative; padding: 5rem 0; overflow: hidden; background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); }
+    .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 120%; background: radial-gradient(ellipse, rgba(212, 168, 67, 0.15) 0%, transparent 70%); pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to top, var(--cream), transparent); pointer-events: none; }
+    .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; position: relative; z-index: 1; }
+    .hero-text { max-width: 540px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--pine); color: var(--cream); padding: 0.5rem 1rem; border-radius: 100px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem; animation: fadeUp 0.6s ease-out; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem; animation: fadeUp 0.6s ease-out 0.1s both; }
+    .hero p { font-size: 1.125rem; color: var(--text-light); margin-bottom: 2rem; animation: fadeUp 0.6s ease-out 0.2s both; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.6s ease-out 0.3s both; }
+    .hero-visual { position: relative; animation: fadeIn 0.8s ease-out 0.4s both; }
+    .hero-card { background: var(--white); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+    .hero-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--pine), var(--gold), var(--red-soft)); }
+    .hero-card h3 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--pine); }
+    .hero-card ul { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .hero-card li { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--cream); border-radius: var(--radius-sm); font-size: 0.9375rem; transition: all var(--transition); }
+    .hero-card li:hover { background: var(--cream-dark); transform: translateX(4px); }
+    .hero-card svg { flex-shrink: 0; color: var(--gold); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @media (max-width: 900px) { .hero-content { grid-template-columns: 1fr; } .hero-text { max-width: 100%; } .hero-visual { order: -1; } }
+
+    /* ===== CATEGORIES ===== */
+    .categories { padding: 5rem 0; background: var(--white); }
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-header .tag { display: inline-block; background: var(--cream); color: var(--gold); padding: 0.375rem 1rem; border-radius: 100px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; }
+    .section-header h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
+    .section-header p { color: var(--text-light); max-width: 600px; margin: 1rem auto 0; }
+    .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .category-card { background: var(--cream); border-radius: var(--radius); padding: 2rem; text-align: center; transition: all var(--transition); cursor: pointer; border: 2px solid transparent; position: relative; overflow: hidden; }
+    .category-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--card-color, var(--pine)); transform: scaleX(0); transform-origin: left; transition: transform var(--transition); }
+    .category-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); border-color: var(--card-color, var(--pine)); }
+    .category-card:hover::before { transform: scaleX(1); }
+    .category-icon { width: 72px; height: 72px; margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center; background: var(--white); border-radius: 50%; box-shadow: var(--shadow); color: var(--card-color, var(--pine)); transition: all var(--transition); }
+    .category-card:hover .category-icon { transform: scale(1.1) rotate(5deg); }
+    .category-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+    .category-card p { color: var(--text-light); font-size: 0.9375rem; }
+    .category-card .tag-list { display: flex; flex-wrap: wrap; gap: 0.375rem; justify-content: center; margin-top: 1rem; }
+    .category-card .tag-list span { font-size: 0.75rem; padding: 0.25rem 0.625rem; border-radius: 100px; background: var(--white); color: var(--text-light); }
+
+    /* ===== TIPS SECTION ===== */
+    .tips { padding: 5rem 0; background: var(--cream); }
+    .filters { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 2.5rem; }
+    .filter-btn { padding: 0.5rem 1.25rem; border-radius: 100px; background: var(--white); color: var(--text); font-weight: 500; font-size: 0.875rem; border: 2px solid transparent; transition: all var(--transition); }
+    .filter-btn:hover, .filter-btn.active { background: var(--pine); color: var(--cream); border-color: var(--pine); }
+    .tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+    .tip-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: all var(--transition); display: flex; flex-direction: column; }
+    .tip-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+    .tip-image { aspect-ratio: 16/10; background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); position: relative; overflow: hidden; }
+    .tip-image svg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 48px; height: 48px; opacity: 0.3; color: var(--pine); }
+    .tip-image .tip-category { position: absolute; top: 1rem; left: 1rem; background: var(--pine); color: var(--cream); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem; font-weight: 600; }
+    .tip-content { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .tip-meta { display: flex; gap: 1rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+    .tip-meta span { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.8125rem; color: var(--text-light); background: var(--cream); padding: 0.25rem 0.75rem; border-radius: 100px; }
+    .tip-meta svg { width: 14px; height: 14px; color: var(--gold); }
+    .tip-content h3 { font-size: 1.125rem; margin-bottom: 0.5rem; transition: color var(--transition); }
+    .tip-card:hover .tip-content h3 { color: var(--red-soft); }
+    .tip-content p { color: var(--text-light); font-size: 0.9375rem; margin-bottom: 1rem; flex: 1; }
+    .tip-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--cream-dark); }
+    .tip-difficulty { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.625rem; border-radius: 100px; }
+    .tip-difficulty.easy { background: #D5F5E3; color: #1E8A49; }
+    .tip-difficulty.medium { background: #FEF9E7; color: #B7950B; }
+    .tip-difficulty.hard { background: #FADBD8; color: #C0392B; }
+
+    /* ===== TIP DETAIL MODAL ===== */
+    .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 1.5rem; opacity: 0; visibility: hidden; transition: all var(--transition); }
+    .modal.open { opacity: 1; visibility: visible; }
+    .modal-content { background: var(--white); border-radius: var(--radius); max-width: 800px; width: 100%; max-height: 90vh; overflow-y: auto; transform: scale(0.95) translateY(20px); transition: transform var(--transition); }
+    .modal.open .modal-content { transform: scale(1) translateY(0); }
+    .modal-header { position: relative; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%); border-radius: var(--radius) var(--radius) 0 0; }
+    .modal-header svg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; opacity: 0.15; color: var(--pine); }
+    .modal-close { position: absolute; top: 1rem; right: 1rem; width: 44px; height: 44px; border-radius: 50%; background: var(--white); color: var(--text); box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; transition: all var(--transition); }
+    .modal-close:hover { background: var(--pine); color: var(--cream); transform: rotate(90deg); }
+    .modal-body { padding: 2rem; }
+    .modal-meta { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+    .modal-meta span { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--cream); border-radius: var(--radius-sm); font-size: 0.875rem; color: var(--text-light); }
+    .modal-meta svg { color: var(--gold); }
+    .modal-body h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.5rem; }
+    .modal-section { margin-bottom: 2rem; }
+    .modal-section h3 { font-size: 1.125rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; color: var(--pine); }
+    .modal-section h3 svg { color: var(--gold); }
+    .materials-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
+    .materials-list li { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--cream); border-radius: var(--radius-sm); }
+    .materials-list li::before { content: '✓'; color: var(--pine-light); font-weight: bold; }
+    .steps ol { list-style: none; counter-reset: step; }
+    .steps li { position: relative; padding-left: 3rem; margin-bottom: 1.5rem; }
+    .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 0; width: 2.25rem; height: 2.25rem; background: var(--pine); color: var(--cream); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; }
+    .extra-tip { background: linear-gradient(135deg, rgba(212, 168, 67, 0.15), rgba(212, 168, 67, 0.05)); border-left: 4px solid var(--gold); padding: 1.5rem; border-radius: 0 var(--radius) var(--radius) 0; }
+    .extra-tip h4 { display: flex; align-items: center; gap: 0.5rem; color: var(--pine-dark); margin-bottom: 0.5rem; }
+    .download-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2rem; }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter { padding: 5rem 0; background: var(--pine); color: var(--cream); text-align: center; }
+    .newsletter h2 { color: var(--cream); font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1rem; }
+    .newsletter p { max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; font-size: 1.125rem; }
+    .newsletter-form { display: flex; gap: 0.75rem; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+    .newsletter-form input { flex: 1; min-width: 250px; padding: 1rem 1.5rem; border-radius: var(--radius); border: none; font-size: 1rem; background: var(--white); color: var(--text); }
+    .newsletter-form input:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .newsletter-form .btn { padding: 1rem 2rem; white-space: nowrap; }
+    .newsletter-form .btn-primary { background: var(--gold); color: var(--pine-dark); }
+    .newsletter-form .btn-primary:hover { background: var(--gold-light); }
+    .newsletter-note { font-size: 0.875rem; opacity: 0.8; margin-top: 1rem; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--pine-dark); color: var(--cream); padding: 4rem 0 2rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand .logo { margin-bottom: 1rem; }
+    .footer-brand p { opacity: 0.8; font-size: 0.9375rem; max-width: 300px; }
+    .footer-column h4 { font-size: 1rem; margin-bottom: 1.25rem; color: var(--gold); }
+    .footer-column ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .footer-column a { opacity: 0.8; transition: all var(--transition); display: inline-flex; align-items: center; gap: 0.5rem; }
+    .footer-column a:hover { opacity: 1; color: var(--gold); transform: translateX(4px); }
+    .social-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
+    .social-links a { width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--cream); transition: all var(--transition); }
+    .social-links a:hover { background: var(--gold); color: var(--pine-dark); transform: translateY(-2px); }
+    .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.875rem; opacity: 0.7; }
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+
+    /* ===== UTILITIES ===== */
+    .hidden { display: none !important; }
+    .toast { position: fixed; bottom: 2rem; right: 2rem; background: var(--pine); color: var(--cream); padding: 1rem 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow-hover); transform: translateY(100px); opacity: 0; transition: all var(--transition); z-index: 1100; }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast.success { background: #1E8A49; }
+    .toast.error { background: var(--red-soft); }
+
+    /* ===== LOADING ===== */
+    .loading { display: inline-block; width: 20px; height: 20px; border: 2px solid transparent; border-top-color: currentColor; border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Manual de Natal - Início">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        Manual de Natal
+      </a>
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav id="main-nav" role="navigation" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#categorias" aria-current="page">Categorias</a></li>
+          <li><a href="#dicas">Dicas</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="#dicas" class="btn btn-secondary">Ver Dicas</a>
+        <a href="#newsletter" class="btn btn-primary">Receber Dicas</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <span class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Natal 2024
+          </span>
+          <h1 id="hero-title">Natal Bonito sem Gastar Muito</h1>
+          <p>Descubra +50 ideias criativas, baratas e sustentáveis para decorar sua casa e presentear quem você ama. Feito à mão, com carinho.</p>
+          <div class="hero-actions">
+            <a href="#categorias" class="btn btn-primary">Explorar Categorias</a>
+            <a href="#newsletter" class="btn btn-gold">Receber por Email</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <h3>✨ Destaques da Semana</h3>
+            <ul>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Árvore de papel kraft</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Velas em potes de vidro</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Furoshiki: embrulho em tecido</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Biscoitos decorados</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Calendário do Advento DIY</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Enfeites de rolha</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="categorias" class="categories" aria-labelledby="cat-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="tag">Escolha sua categoria</span>
+          <h2 id="cat-title">Ideias por Estilo</h2>
+          <p>Navegue por temas e encontre o projeto perfeito para seu tempo, orçamento e habilidade.</p>
+        </header>
+        <div class="categories-grid" role="list">
+          <article class="category-card" data-category="arvores" role="listitem" style="--card-color: #1B4D3E;" tabindex="0" aria-label="Árvores & Enfeites - 12 projetos">
+            <div class="category-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <h3>Árvores & Enfeites</h3>
+            <p>De papel, feltro, materiais recicláveis e natureza. Árvores alternativas que cabem em qualquer canto.</p>
+            <div class="tag-list"><span>Papel</span><span>Feltro</span><span>Reciclável</span><span>Natureza</span></div>
+          </article>
+          <article class="category-card" data-category="velas" role="listitem" style="--card-color: #D4A843;" tabindex="0" aria-label="Velas & Iluminação - 8 projetos">
+            <div class="category-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2a6 6 0 0 0-6 6v10"/><path d="M12 8v8"/><path d="M8 16h8"/><path d="M12 2v2"/></svg></div>
+            <h3>Velas & Iluminação</h3>
+            <p>Potinhos, lanternas, pisca-pisca personalizado e luzes que criam clima natalino sem gastar energia.</p>
+            <div class="tag-list"><span>Vidro</span><span>Lata</span><span>LED</span><span>Natural</span></div>
+          </article>
+          <article class="category-card" data-category="embalagens" role="listitem" style="--card-color: #C0392B;" tabindex="0" aria-label="Embalagens & Presentes - 10 projetos">
+            <div class="category-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="16 3 22 3 22 9 16 9"/><rect x="2" y="3" width="14" height="18" rx="2"/><path d="M10 3v18"/></svg></div>
+            <h3>Embalagens & Presentes</h3>
+            <p>Furoshiki, caixas kraft, tags personalizadas, sacolas de tecido — o embrulho vira parte do presente.</p>
+            <div class="tag-list"><span>Tecido</span><span>Kraft</span><span>Papel</span><span>Reutilizável</span></div>
+          </article>
+          <article class="category-card" data-category="comidinhas" role="listitem" style="--card-color: #8FBC8F;" tabindex="0" aria-label="Comidinhas & Mesa - 9 projetos">
+            <div class="category-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>Comidinhas & Mesa</h3>
+            <p>Biscoitos decorados, enfeites comestíveis, arranjos de mesa e receitas que viram presentes deliciosos.</p>
+            <div class="tag-list"><span>Biscoitos</span><span>Chocolate</span><span>Frutas</span><span>Mesa</span></div>
+          </article>
+          <article class="category-card" data-category="familia" role="listitem" style="--card-color: #6A5ACD;" tabindex="0" aria-label="Atividades em Família - 7 projetos">
+            <div class="category-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Atividades em Família</h3>
+            <p>Calendário do Advento, cartões feitos à mão, cartinhas ao Papai Noel — memórias que duram a vida toda.</p>
+            <div class="tag-list"><span>Crianças</span><span>Avós</span><span>Memórias</span><span>Tradição</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPS -->
+    <section id="dicas" class="tips" aria-labelledby="tips-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="tag">Todas as dicas</span>
+          <h2 id="tips-title">Projetos Passo a Passo</h2>
+          <p>Filtre por custo, tempo ou dificuldade. Cada dica tem materiais, fotos e PDF para baixar.</p>
+        </header>
+        <div class="filters" role="group" aria-label="Filtros de dicas">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">Todas</button>
+          <button class="filter-btn" data-filter="custo-gratis" aria-pressed="false">Grátis</button>
+          <button class="filter-btn" data-filter="custo-10" aria-pressed="false">Até R$10</button>
+          <button class="filter-btn" data-filter="custo-30" aria-pressed="false">Até R$30</button>
+          <button class="filter-btn" data-filter="tempo-15" aria-pressed="false">15 min</button>
+          <button class="filter-btn" data-filter="tempo-1h" aria-pressed="false">1 hora</button>
+          <button class="filter-btn" data-filter="tempo-tarde" aria-pressed="false">Uma tarde</button>
+          <button class="filter-btn" data-filter="facil" aria-pressed="false">Fácil</button>
+          <button class="filter-btn" data-filter="medio" aria-pressed="false">Médio</button>
+          <button class="filter-btn" data-filter="dificil" aria-pressed="false">Desafio</button>
+        </div>
+        <div class="tips-grid" role="list" id="tips-grid">
+          <!-- Tips rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="newsletter" aria-labelledby="nl-title">
+      <div class="container">
+        <h2 id="nl-title">Receba 1 Dica por Semana</h2>
+        <p>Sem spam, só inspiração natalina direto no seu email ou WhatsApp. Cancele quando quiser.</p>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <label for="email" class="sr-only">Seu melhor email</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email" aria-describedby="email-hint">
+          <span id="email-hint" class="sr-only">Digite seu email para receber dicas semanais de natal</span>
+          <button type="submit" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            Quero Receber
+          </button>
+        </form>
+        <p class="newsletter-note">Ao cadastrar, você concorda com nossa <a href="#privacidade" style="color: var(--gold); text-decoration: underline;">Política de Privacidade</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand footer-column">
+          <a href="/" class="logo" aria-label="Manual de Natal - Início">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Manual de Natal
+          </a>
+          <p>O guia mais completo de decoração e presentes caseiros para um Natal bonito, barato e cheio de significado. Feito com carinho para famílias brasileiras.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Pinterest"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="17" x2="12" y2="22"/><path d="M5 17h14v-2a2 2 0 0 0-2-2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h20a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><polygon points="23 7 16 12 23 17 23 7"/></svg></a>
+            <a href="#" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Categorias</h4>
+          <ul>
+            <li><a href="#categorias"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Árvores & Enfeites</a></li>
+            <li><a href="#categorias"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Velas & Iluminação</a></li>
+            <li><a href="#categorias"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Embalagens & Presentes</a></li>
+            <li><a href="#categorias"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Comidinhas & Mesa</a></li>
+            <li><a href="#categorias"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Atividades em Família</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Filtros Rápidos</h4>
+          <ul>
+            <li><a href="#dicas"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Grátis (custo zero)</a></li>
+            <li><a href="#dicas"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Até R$10</a></li>
+            <li><a href="#dicas"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Até 15 minutos</a></li>
+            <li><a href="#dicas"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Projetos Fáceis</a></li>
+            <li><a href="#dicas"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Para Crianças</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Sobre</h4>
+          <ul>
+            <li><a href="#sobre"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Nossa História</a></li>
+            <li><a href="#contato"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Contato & Parcerias</a></li>
+            <li><a href="#enviar-dica"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Envie sua Dica</a></li>
+            <li><a href="#privacidade"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Política de Privacidade</a></li>
+            <li><a href="#termos"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Termos de Uso</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Manual de Natal. Feito com <span style="color: var(--red-soft);">♥</span> para famílias brasileiras.</p>
+        <p>Hospedado no GitHub Pages • Código aberto • <a href="https://github.com/damasceno70-collab/manual-de-natal" target="_blank" rel="noopener" style="color: var(--gold);">Ver no GitHub</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TIP DETAIL MODAL -->
+  <div class="modal" id="tip-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="modal-close" aria-label="Fechar detalhes da dica"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta" id="modal-meta"></div>
+        <h2 id="modal-title"></h2>
+        <div class="modal-section" id="modal-materials">
+          <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg> Materiais</h3>
+          <ul class="materials-list" id="materials-list"></ul>
+        </div>
+        <div class="modal-section steps" id="modal-steps">
+          <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Passo a Passo</h3>
+          <ol id="steps-list"></ol>
+        </div>
+        <div class="modal-section extra-tip" id="modal-extra">
+          <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> Dica Extra</h4>
+          <p id="extra-text"></p>
+        </div>
+        <a href="#" class="btn btn-primary download-btn" id="download-btn" download>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Baixar PDF
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <!-- SERVICE WORKER REGISTRATION -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+  </script>
+
+  <!-- MAIN JS -->
+  <script>
+    // ===== DATA =====
+    const tipsData = [
+      {
+        id: 1,
+        title: "Árvore de Natal de Papel Kraft",
+        category: "arvores",
+        image: "🎄",
+        cost: "gratis",
+        time: "tempo-15",
+        difficulty: "facil",
+        costLabel: "Grátis",
+        timeLabel: "15 min",
+        difficultyLabel: "Fácil",
+        materials: [
+          "Papel kraft (pode ser sacolas de mercado)",
+          "Tesoura",
+          "Cola bastão ou fita dupla face",
+          "Barbante ou fita",
+          "Enfeites: botões, retalhos, canetinhas",
+          "Base: copo plástico ou rolo de papelão"
+        ],
+        steps: [
+          "Corte o papel kraft em tiras de 3-5 cm de largura. Quanto mais tiras, mais cheia a árvore.",
+          "Dobre cada tira em forma de leque (sanfona) e prenda o centro com fita ou cola.",
+          "Abra os leques formando círculos de tamanhos decrescentes: maior na base, menor no topo.",
+          "Empilhe os círculos do maior para o menor, colando o centro de cada um.",
+          "Para a base, use um copo plástico virado ou rolo de papelão firme. Cole a árvore nele.",
+          "Decore com botões coloridos, retalhos de tecido, desenhos de canetinha ou o que tiver em casa.",
+          "Finalize com uma estrela de papel dourado no topo (pode cortar de embalagem de presente)."
+        ],
+        extra: "Dica: faça várias árvores pequenas e crie uma floresta natalina na janela ou na mesa da sala. Crianças adoram ajudar a dobrar os leques!",
+        pdfName: "arvore-papel-kraft.pdf"
+      },
+      {
+        id: 2,
+        title: "Velas Aromáticas em Potes de Vidro",
+        category: "velas",
+        image: "🕯️",
+        cost: "custo-10",
+        time: "tempo-1h",
+        difficulty: "facil",
+        costLabel: "Até R$10",
+        timeLabel: "1 hora",
+        difficultyLabel: "Fácil",
+        materials: [
+          "Potes de vidro limpos (geleia, azeitona, molho)",
+          "Cera de soja ou parafina (R$8-12/kg)",
+          "Pavio de algodão com base metálica",
+          "Óleos essenciais: canela, laranja, pinheiro, baunilha",
+          "Corante para velas (opcional: vermelho, verde, dourado)",
+          "Palito de churrasco ou lápis para centralizar o pavio",
+          "Panela velha para banho-maria"
+        ],
+        steps: [
+          "Lave bem os potes e seque completamente. Qualquer umidade faz a vela rachar.",
+          "Cole a base do pavio no centro do pote com gota de cera derretida ou cola quente.",
+          "Centralize o pavio enrolando a ponta num palito/lápis apoiado na borda do pote.",
+          "Derreta a cera em banho-maria (nunca direto no fogo). Temperatura ideal: 70-80°C.",
+          "Adicione 30-40 gotas de óleo essencial por 200g de cera. Misture bem.",
+          "Se quiser cor, adicione corante aos poucos até o tom desejado.",
+          "Despeje a cera devagar no pote, deixando 1 cm da borda. Segure o palito para o pavio não tombar.",
+          "Deixe esfriar 4-6 horas em local sem corrente de ar. Apare o pavio a 5 mm antes de acender."
+        ],
+        extra: "Dica de ouro: faça camadas de cores diferentes! Despeje a primeira camada, espere endurecer 30 min, depois despeje a segunda. Fica lindo com vermelho + branco + verde.",
+        pdfName: "velas-potes-vidro.pdf"
+      },
+      {
+        id: 3,
+        title: "Furoshiki: Embrulho em Tecido Japonês",
+        category: "embalagens",
+        image: "🎁",
+        cost: "custo-10",
+        time: "tempo-15",
+        difficulty: "facil",
+        costLabel: "Até R$10",
+        timeLabel: "15 min",
+        difficultyLabel: "Fácil",
+        materials: [
+          "Tecido quadrado 50x50 cm ou 70x70 cm (algodão, linho, seda, ou lenço grande)",
+          "Tesoura (se precisar cortar o tecido)",
+          "Ferro de passar (opcional, para vincos perfeitos)",
+          "Presente para embrulhar"
+        ],
+        steps: [
+          "Estenda o tecido com o lado 'feio' para cima. Coloque o presente no centro, na diagonal.",
+          "Traga a ponta de cima sobre o presente, depois a de baixo, cobrindo bem.",
+          "Puxe as duas pontas laterais para o centro, esticando o tecido firmemente.",
+          "Dê um nó duplo com as duas pontas laterais (nó quadrado: direita sobre esquerda, depois esquerda sobre direita).",
+          "Ajeite as 'orelhas' do nó para ficar bonito. Se sobrar tecido, faça um laço decorativo.",
+          "Para garrafas: coloque na diagonal, una as pontas de cima e baixo no gargalo, dê nó nas laterais.",
+          "Para caixas retangulares: use a técnica 'otsukai tsutsumi' (embrulho de carregar) — fica elegante e seguro."
+        ],
+        extra: "O tecido vira parte do presente! A pessoa pode reutilizar como lenço, bandana, ecobag ou toalha de mesa. Tecidos natalinos (xadrez, poás dourados, vermelho liso) ficam lindos o ano todo.",
+        pdfName: "furoshiki-embrulho-tecido.pdf"
+      },
+      {
+        id: 4,
+        title: "Biscoitos de Gengibre Decorados",
+        category: "comidinhas",
+        image: "🍪",
+        cost: "custo-10",
+        time: "tempo-tarde",
+        difficulty: "medio",
+        costLabel: "Até R$10",
+        timeLabel: "Uma tarde",
+        difficultyLabel: "Médio",
+        materials: [
+          "250g farinha de trigo",
+          "100g manteiga gelada em cubos",
+          "100g açúcar mascavo",
+          "1 ovo",
+          "1 colher (sopa) mel ou melaço",
+          "1 colher (chá) bicarbonato",
+          "2 colheres (chá) gengibre em pó",
+          "1 colher (chá) canela em pó",
+          "1/2 colher (chá) cravo em pó",
+          "Pitada de noz-moscada e sal",
+          "Glacê real: 1 clara + 200g açúcar de confeiteiro + gotas de limão",
+          "Corantes alimentícios (vermelho, verde, branco)",
+          "Cortadores natalinos (estrela, árvore, boneco, sino)",
+          "Sacos de confeitar ou sacos plásticos com bico cortado"
+        ],
+        steps: [
+          "Na batedeira, bata manteiga + açúcar até creme claro. Adicione ovo + mel.",
+          "Misture secos: farinha, bicarbonato, especiarias, sal. Incorpore aos poucos na massa.",
+          "Forme uma bola, envolva em filme plástico e gele 1 hora (obrigatório para cortar bem).",
+          "Preaqueça forno a 180°C. Forre assadeiras com papel manteiga.",
+          "Abra a massa em superfície enfarinhada (espessura 0,5 cm). Corte com cortadores.",
+          "Asse 8-10 min até as bordas dourarem. Centro fica macio — endurece ao esfriar.",
+          "Deixe esfriar completamente na grade antes de decorar.",
+          "Faça o glacê: bata clara + açúcar + limão até picos firmes. Divida e pinte.",
+          "Decore: contorne com glacê firme, preencha com glacê mais fluido. Use palito para detalhes.",
+          "Deixe secar 2h. Embale em saquinhos de celofane com fita natalina."
+        ],
+        extra: "Massa crua dura 3 meses no freezer! Faça em dobro: asse metade agora, congele o resto para dezembro. Glacê pronto dura 1 semana na geladeira (cubra com filme plástico encostado na superfície).",
+        pdfName: "biscoitos-gengibre.pdf"
+      },
+      {
+        id: 5,
+        title: "Calendário do Advento de Saquinhos",
+        category: "familia",
+        image: "📅",
+        cost: "custo-30",
+        time: "tempo-tarde",
+        difficulty: "medio",
+        costLabel: "Até R$30",
+        timeLabel: "Uma tarde",
+        difficultyLabel: "Médio",
+        materials: [
+          "24 saquinhos de tecido, papel kraft ou envelopes (R$15-25 pacote)",
+          "Barbante, cordão ou fita (3-4 metros)",
+          "24 mini prendedores de madeira ou clips decorativos",
+          "Números 1-24: adesivos, carimbos, canetinha ou recortes de papel",
+          "Galho seco bonito (50-80 cm) ou vara de bambu/ferro para pendurar",
+          "Pequenos presentes: doces, bilhetes, cupons ('cinema em casa', 'massagem nos pés'), brinquedos pequenos, enfeites",
+          "Furador de papel (para furos nos saquinhos) ou agulha grossa"
+        ],
+        steps: [
+          "Numere os 24 saquinhos/envelopes de 1 a 24. Deixe as crianças ajudarem a decorar!",
+          "Prepare 24 surpresas: misture doces, bilhetes carinhosos, cupons de experiências familiares, pequenos brinquedos, enfeites para a árvore.",
+          "Coloque uma surpresa em cada saquinho. Feche com fita ou dobre a borda.",
+          "Faça dois furos na parte superior de cada saquinho (ou use a abertura do envelope).",
+          "Passe o barbante pelo galho/varo, deixando pontas longas para pendurar na parede/porta.",
+          "Pendure os saquinhos no barbante com os prendedores, em ordem numérica ou embaralhados para caça ao tesouro.",
+          "Fixe o galho na parede com ganchos adesivos (Command) ou fita forte. Deixe ao alcance das crianças."
+        ],
+        extra: "Cupons de experiências valem mais que doces: 'Escolhe o filme da noite', 'Café da manhã na cama', 'Passeio no parque', 'Noite de jogos', 'Isenção de lavar a louça'. Crie memórias, não lixo!",
+        pdfName: "calendario-advento-saquinhos.pdf"
+      },
+      {
+        id: 6,
+        title: "Enfeites de Rolha de Cortiça",
+        category: "arvores",
+        image: "🍷",
+        cost: "gratis",
+        time: "tempo-1h",
+        difficulty: "facil",
+        costLabel: "Grátis",
+        timeLabel: "1 hora",
+        difficultyLabel: "Fácil",
+        materials: [
+          "Rolhas de cortiça (vinho, champanhe, azeite)",
+          "Tinta acrílica: vermelho, verde, branco, dourado, prata",
+          "Pincéis finos",
+          "Cola quente ou cola branca forte",
+          "Olhos móveis (opcional)",
+          "Pompons pequenos, botões, retalhos de feltro",
+          "Barbante ou fita para pendurar",
+          "Palitos de dente (para detalhes)",
+          "Verniz acrílico spray (opcional, para durar anos)"
+        ],
+        steps: [
+          "Lave as rolhas com água e sabão. Seque bem ao sol (cortiça absorve umidade).",
+          "Pinte a base de cada rolha: vermelho (Papai Noel), verde (árvore/elfo), branco (boneco de neve). Deixe secar.",
+          "Com pincel fino, faça detalhes: faixa preta + fivela dourada no Papai Noel, carinha no boneco de neve, listras no elfo.",
+          "Cole olhinhos móveis ou pinte com palito de dente mergulhado em tinta preta.",
+          "Adicione acessórios: pompon no gorro do Papai Noel, cachecol de feltro no boneco de neve, chapéu de feltro no elfo.",
+          "Para pendurar: faça um laço com barbante/fita, cole com cola quente no topo da rolha.",
+          "Opcional: passe verniz spray para proteger a tinta e dar brilho. Seque 24h antes de manusear."
+        ],
+        extra: "Colete rolhas o ano todo! Peça em restaurantes, bares, festas. Cada rolha tem formato único — isso dá personalidade. Faça uma 'família de rolhas' representando sua família real.",
+        pdfName: "enfeites-rolha-cortica.pdf"
+      },
+      {
+        id: 7,
+        title: "Guirlanda de Folhas Secas e Galhos",
+        category: "arvores",
+        image: "🍂",
+        cost: "gratis",
+        time: "tempo-1h",
+        difficulty: "facil",
+        costLabel: "Grátis",
+        timeLabel: "1 hora",
+        difficultyLabel: "Fácil",
+        materials: [
+          "Galhos flexíveis (salgueiro, videira, cipó) ou arame grosso coberto com fita floral",
+          "Folhas secas bonitas (coletadas no parque/quintal)",
+          "Pinhas, sementes, cápsulas de eucalipto",
+          "Fita vermelha ou dourada larga (1,5-2 m)",
+          "Cola quente",
+          "Tesoura de poda ou alicate",
+          "Spray dourado/prata (opcional, para pinhas)"
+        ],
+        steps: [
+          "Modele o galho/arame em círculo do tamanho desejado (30-50 cm). Prenda as pontas com arame fino ou fita floral.",
+          "Se usar pinhas, pinte com spray dourado/prata em área ventilada. Deixe secar 30 min.",
+          "Distribua as folhas secas ao redor da base, colando com cola quente. Sobreponha levemente.",
+          "Adicione pinhas e sementes nos espaços vazios. Varie tamanhos e texturas.",
+          "Faça um laço grande com a fita vermelha/dourada. Cole no topo ou na base da guirlanda.",
+          "Para pendurar: faça um laço de arame/fita na parte de trás. Use gancho adesivo na porta."
+        ],
+        extra: "Passe uma camada fina de cola branca diluída em água (1:1) nas folhas com pincel — isso evita que esfarelem e dá brilho natural. Guirlanda dura o mês todo e depois vira composto!",
+        pdfName: "guirlanda-folhas-secas.pdf"
+      },
+      {
+        id: 8,
+        title: "Cartões Pop-Up de Natal",
+        category: "familia",
+        image: "💌",
+        cost: "gratis",
+        time: "tempo-15",
+        difficulty: "facil",
+        costLabel: "Grátis",
+        timeLabel: "15 min",
+        difficultyLabel: "Fácil",
+        materials: [
+          "Papel cartão A4 branco ou colorido (pode reaproveitar caixas de cereal/corrugado)",
+          "Papel comum A4 para base (branco ou cor contrastante)",
+          "Tesoura, estilete, régua",
+          "Cola bastão ou fita dupla face",
+          "Canetinhas, lápis de cor, glitter, adesivos",
+          "Lápis e borracha para rascunho"
+        ],
+        steps: [
+          "Dobre o papel cartão ao meio (cartão fechado). Dobre a base ao meio também.",
+          "No papel cartão (parte de dentro), desenhe meia árvore/estrela/sino no centro da dobra.",
+          "Corte o contorno com estilete, MANTENDO a base do desenho presa na dobra (não corte tudo!).",
+          "Empurre o recorte para DENTRO do cartão, invertendo a dobra. Ao abrir, ele 'pula' para fora.",
+          "Cole a base do cartão por cima do papel comum (esconde o corte por trás). Alinhe as bordas.",
+          "Decore a frente: 'Feliz Natal', nomes, desenhos. Por dentro: mensagem + o pop-up decorado.",
+          "Variação: faça 2-3 camadas de pop-up (árvore + presente + estrela) em alturas diferentes."
+        ],
+        extra: "Use papel de scrapbook, revistas velhas, embalagens bonitas para recortar detalhes (bolinhas, laços, estrelas) e colar no pop-up. Crianças de 6+ anos conseguem fazer com supervisão no estilete.",
+        pdfName: "cartoes-pop-up-natal.pdf"
+      }
+    ];
+
+    // ===== STATE =====
+    let activeFilters = new Set(['all']);
+    let currentTipId = null;
+
+    // ===== DOM ELEMENTS =====
+    const tipsGrid = document.getElementById('tips-grid');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const modal = document.getElementById('tip-modal');
+    const modalClose = modal.querySelector('.modal-close');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mainNav = document.getElementById('main-nav');
+    const newsletterForm = document.getElementById('newsletter-form');
+    const toast = document.getElementById('toast');
+    const categoryCards = document.querySelectorAll('.category-card');
+
+    // ===== UTILS =====
+    const showToast = (message, type = 'success') => {
+      toast.textContent = message;
+      toast.className = `toast ${type} show`;
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    };
+
+    const createElement = (html) => {
+      const template = document.createElement('template');
+      template.innerHTML = html.trim();
+      return template.content.firstChild;
+    };
+
+    // ===== RENDER TIPS =====
+    const renderTips = () => {
+      tipsGrid.innerHTML = '';
+      const filtered = tipsData.filter(tip => {
+        if (activeFilters.has('all')) return true;
+        return (
+          (activeFilters.has('custo-gratis') && tip.cost === 'gratis') ||
+          (activeFilters.has('custo-10') && tip.cost === 'custo-10') ||
+          (activeFilters.has('custo-30') && tip.cost === 'custo-30') ||
+          (activeFilters.has('tempo-15') && tip.time === 'tempo-15') ||
+          (activeFilters.has('tempo-1h') && tip.time === 'tempo-1h') ||
+          (activeFilters.has('tempo-tarde') && tip.time === 'tempo-tarde') ||
+          (activeFilters.has('facil') && tip.difficulty === 'facil') ||
+          (activeFilters.has('medio') && tip.difficulty === 'medio') ||
+          (activeFilters.has('dificil') && tip.difficulty === 'dificil')
+        );
+      });
+
+      if (filtered.length === 0) {
+        tipsGrid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--text-light);padding:2rem;">Nenhuma dica encontrada com esses filtros. Tente combinar menos filtros.</p>';
+        return;
+      }
+
+      filtered.forEach(tip => {
+        const card = createElement(`
+          <article class="tip-card" role="listitem" tabindex="0" data-tip-id="${tip.id}">
+            <div class="tip-image">
+              <span class="tip-category">${tip.category === 'arvores' ? '🎄 Árvores' : tip.category === 'velas' ? '🕯️ Velas' : tip.category === 'embalagens' ? '🎁 Embalagens' : tip.category === 'comidinhas' ? '🍪 Comidinhas' : '👨‍👩‍👧‍👦 Família'}</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="tip-content">
+              <div class="tip-meta">
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></span>${tip.timeLabel}</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></span>${tip.costLabel}</span>
+              </div>
+              <h3>${tip.title}</h3>
+              <p>${tip.steps[0].substring(0, 100)}...</p>
+              <div class="tip-footer">
+                <span class="tip-difficulty ${tip.difficulty}">${tip.difficulty === 'facil' ? 'Fácil' : tip.difficulty === 'medio' ? 'Médio' : 'Desafio'}</span>
+                <button class="btn btn-primary" style="padding:0.5rem 1rem;font-size:0.875rem;" aria-label="Ver detalhes de ${tip.title}">Ver Passo a Passo</button>
+              </div>
+            </div>
+          </article>
+        `);
+        tipsGrid.appendChild(card);
+      });
+
+      // Add click listeners to new cards
+      tipsGrid.querySelectorAll('.tip-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('button')) return;
+          openModal(parseInt(card.dataset.tipId));
+        });
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openModal(parseInt(card.dataset.tipId));
+          }
+        });
+        card.querySelector('button').addEventListener('click', (e) => {
+          e.stopPropagation();
+          openModal(parseInt(card.dataset.tipId));
+        });
+      });
+    };
+
+    // ===== MODAL =====
+    const openModal = (tipId) => {
+      const tip = tipsData.find(t => t.id === tipId);
+      if (!tip) return;
+
+      currentTipId = tipId;
+      document.getElementById('modal-title').textContent = tip.title;
+      document.getElementById('modal-meta').innerHTML = `
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>${tip.timeLabel}</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>${tip.costLabel}</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>${tip.difficulty === 'facil' ? 'Fácil' : tip.difficulty === 'medio' ? 'Médio' : 'Desafio'}</span>
+      `;
+
+      document.getElementById('materials-list').innerHTML = tip.materials.map(m => `<li>${m}</li>`).join('');
+      document.getElementById('steps-list').innerHTML = tip.steps.map(s => `<li>${s}</li>`).join('');
+      document.getElementById('extra-text').textContent = tip.extra;
+      document.getElementById('download-btn').href = '#';
+      document.getElementById('download-btn').dataset.pdf = tip.pdfName;
+      document.getElementById('download-btn').onclick = (e) => {
+        e.preventDefault();
+        showToast('PDF seria gerado aqui. Em produção, use jsPDF ou link para arquivo estático.', 'success');
+      };
+
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      modalClose.focus();
+    };
+
+    const closeModal = () => {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      currentTipId = null;
+    };
+
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+
+    // ===== FILTERS =====
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        if (filter === 'all') {
+          activeFilters.clear();
+          activeFilters.add('all');
+          filterBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.filter === 'all');
+            b.setAttribute('aria-pressed', b.dataset.filter === 'all');
+          });
+        } else {
+          activeFilters.delete('all');
+          if (activeFilters.has(filter)) {
+            activeFilters.delete(filter);
+          } else {
+            activeFilters.add(filter);
+          }
+          if (activeFilters.size === 0) activeFilters.add('all');
+
+          filterBtns.forEach(b => {
+            const isActive = activeFilters.has(b.dataset.filter);
+            b.classList.toggle('active', isActive);
+            b.setAttribute('aria-pressed', isActive);
+          });
+        }
+        renderTips();
+      });
+    });
+
+    // ===== CATEGORY CARDS =====
+    categoryCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const cat = card.dataset.category;
+        document.getElementById('categorias').scrollIntoView({ behavior: 'smooth' });
+        activeFilters.clear();
+        activeFilters.add(cat);
+        filterBtns.forEach(b => {
+          const isActive = b.dataset.filter === cat;
+          b.classList.toggle('active', isActive);
+          b.setAttribute('aria-pressed', isActive);
+        });
+        renderTips();
+      });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+
+    // ===== MOBILE MENU =====
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+      mobileMenuBtn.querySelector('svg').innerHTML = isOpen
+        ? '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>'
+        : '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';
+    });
+
+    // Close mobile menu on link click
+    mainNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenuBtn.querySelector('svg').innerHTML = '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';
+      });
+    });
+
+    // ===== NEWSLETTER =====
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = newsletterForm.email.value.trim();
+      if (!email || !email.includes('@')) {
+        showToast('Digite um email válido', 'error');
+        return;
+      }
+      // Simulate API call
+      const btn = newsletterForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="loading"></span> Cadastrando...';
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg> Quero Receber';
+        newsletterForm.reset();
+        showToast('Email cadastrado! Você receberá a primeira dica na próxima semana.', 'success');
+      }, 1000);
+    });
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          target.focus({ preventScroll: true });
+        }
+      });
+    });
+
+    // ===== HEADER SCROLL EFFECT =====
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 100) {
+        header.style.boxShadow = '0 4px 24px rgba(27,77,62,0.15)';
+      } else {
+        header.style.boxShadow = '0 4px 20px rgba(27,77,62,0.12)';
+      }
+      lastScroll = currentScroll;
+    }, { passive: true });
+
+    // ===== INIT =====
+    renderTips();
+
+    // Register click on download buttons in modal (delegated)
+    document.getElementById('download-btn').addEventListener('click', (e) => {
+      e.preventDefault();
+      showToast('Funcionalidade de PDF requer backend. Use jsPDF no frontend ou gere PDFs estáticos no build.', 'success');
+    });
+
+    // ===== PWA INSTALL PROMPT =====
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      // Could show custom install button here
+    });
+
+    // ===== PERFORMANCE: LAZY LOAD IMAGES (when real images added) =====
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            observer.unobserve(img);
+          }
+        });
+      });
+      document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
+    }
+  </script>
+</body>
+</html>

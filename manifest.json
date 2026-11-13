@@ -1,0 +1,20 @@
+{
+  "name": "Manual de Natal",
+  "short_name": "Manual Natal",
+  "description": "Guia prático de decoração e presentes caseiros, baratos e criativos para o Natal",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDF6E3",
+  "theme_color": "#1B4D3E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎄</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "education"],
+  "lang": "pt-BR"
+}
